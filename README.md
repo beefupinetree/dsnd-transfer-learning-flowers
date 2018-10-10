@@ -3,7 +3,7 @@ README
 # **Transfer Learning for Image Classification**
 <p align="center"><img src="/img/cover.png?raw=true"/></p>
 
-![Cover](./assets/cover.png)
+
 
 ---
 
@@ -476,5 +476,5 @@ ax.set_title('How confident is this model, really?')
 plt.xlim([0.0, 1.0])   # set the range of the x-axis between 0 & 1
 plt.show()
 ```
-![Image to predict](./img/result.png)
-![Final prediction results](./img/result_2.png)
+<p align="center"><img src="/img/result.png?raw=true"/></p>
+<p align="center"><img src="/img/result_2.png?raw=true"/></p>
