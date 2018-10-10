@@ -26,15 +26,6 @@ When you've completed this project, you'll have an application that can be train
 
 First up is importing the packages you'll need. It's good practice to keep all the imports at the beginning of your code. As you work through this notebook and find you need to import a package, make sure to add the import up here.
 
-
-```python
-# Please notice that some parts of this project are based on the official pytorch tutorial.
-# https://pytorch.org/tutorials/beginner/transfer_learning_tutorial.html
-%load_ext autoreload
-%autoreload 2
-```
-
-
 ```python
 import json
 import time
