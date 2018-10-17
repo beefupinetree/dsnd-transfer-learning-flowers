@@ -102,8 +102,7 @@ for ii in range(4):
     ax = axes[ii]
     helper.imshow(images[ii], ax=ax)
 ```
-![Sample images](./img/sample_1.png)
-![Sample images](./img/sample_2.png)
+![Sample images](./img/sample.png)
 
 ### Label mapping
 
@@ -404,23 +403,11 @@ print(classes)
 > ['19', '1', '93', '76', '86']
 ```
 
-
-```python
-probs, classes = predict.predict(image='sample_img.jpg', checkpoint='my_model.pt', labels='cat_to_name.json', gpu=True)
-
-print(probs)
-print(classes)
-```
-
-    [0.22858675 0.20332417 0.19544812 0.18642561 0.18621536]
-    ['wild pansy', 'primula', 'balloon flower', 'peruvian lily', 'columbine']
-
-
 ## Sanity Checking
 
 Now that you can use a trained model for predictions, check to make sure it makes sense. Even if the testing accuracy is high, it's always good to check that there aren't obvious bugs. Use `matplotlib` to plot the probabilities for the top 5 classes as a bar graph, along with the input image. It should look like this:
 
-<img src='assets/inference_example.png' width=300px>
+<p align="center"><img src="/img/sanity_check.png?raw=true"/></p>
 
 You can convert from the class integer encoding to actual flower names with the `cat_to_name.json` file (should have been loaded earlier in the notebook). To show a PyTorch tensor as an image, use the `imshow` function defined above.
 
