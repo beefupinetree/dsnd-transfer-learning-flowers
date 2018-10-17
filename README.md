@@ -102,7 +102,8 @@ for ii in range(4):
     ax = axes[ii]
     helper.imshow(images[ii], ax=ax)
 ```
-![Sample images](./assets/sample_images.png)
+![Sample images](./img/sample_1.png)
+![Sample images](./img/sample_2.png)
 
 ### Label mapping
 
@@ -383,7 +384,7 @@ imshow(process_image(img))
 ```
 
 
-![Sample image output](./img/sample_img_output.png)
+![Sample image output](./img/output.png)
 
 
 ## Class Prediction
