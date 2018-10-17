@@ -35,6 +35,7 @@ import matplotlib.pyplot as plt
 
 import torch
 from torch import nn, optim
+import torchvision
 from torchvision import datasets, transforms, models
 from torch.utils.data import DataLoader
 from collections import OrderedDict
@@ -448,8 +449,8 @@ imshow(img)
 
 # Looping through all images in a folder
 
-directory = data_dir + "/test/1"
-
+directory = data_dir + "/test/2"
+print(cat_to_name['2'])
 for file in os.listdir(directory):
     filename = os.fsdecode(file)
     if filename.endswith(".jpg"):
@@ -457,8 +458,19 @@ for file in os.listdir(directory):
     else:
         continue
 
-
-# ## Class Prediction
+# =============================================================================
+# # Get a batch of training data
+# tl = DataLoader(image_datasets_train, batch_size=5, shuffle=True)
+# inputs, classes = next(iter(tl))
+# 
+# # Make a grid from batch
+# out = torchvision.utils.make_grid(inputs)
+# 
+# labels = classes.data.numpy().astype(np.str)
+# 
+# imshow(out, title=[cat_to_name[x] for x in labels])
+# # ## Class labels
+# =============================================================================
 # 
 # Once you can get images in the correct format, it's time to write a function for making predictions with your model. A common practice is to predict the top 5 or so (usually called top-$K$) most probable classes. You'll want to calculate the class probabilities then find the $K$ largest values.
 # 
@@ -531,13 +543,14 @@ print(classes)
 
 # TODO: Display an image along with the top 5 classes
 
-img_path = (data_dir + '/test/52/image_04160.jpg')
+# img_path = (data_dir + '/test/52/image_04160.jpg')
+img_path = "C:\\Users\\tarek\\Downloads\\FSS10346PF-2.jpg"
 img = process_image(img_path)
 
 # function to handle a different path structure when labeling the input image
 
 
-def check_structure(path): 
+def check_structure(path):
     try:
         ans = cat_to_name[path.split("/")[7]]
     except IndexError:
