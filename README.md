@@ -384,7 +384,7 @@ imshow(process_image(img))
 ```
 
 
-![Sample image output](./img/sample_img_output.png)
+![Sample image output](./img/output.png)
 
 
 ## Class Prediction
